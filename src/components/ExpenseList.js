@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import ExpenseItem from './ExpenseItem';
 
 const ExpenseList = () => {
     const { expenses } = useContext(AppContext);
@@ -17,7 +18,7 @@ const ExpenseList = () => {
             </thead>
             <tbody>
                 {expenses.map((expense)=>(
-                    <ExpenseItem id={expense.id} key={expense.id} name={expense.name} unitprice={expense.unitprice} />
+                    <ExpenseItem id={expense.id} key={expense.id} name={expense.name} unitprice={expense.unitPrice} />
                 ))}
             </tbody>
         </table>
